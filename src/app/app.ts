@@ -22,6 +22,15 @@ export class App {
   result = 0;
   isResultEven = true;
 
+  classes = {
+    'btn-color': false,
+    'blue-font': false,
+    'medium-font': false,
+    'large-padding': false
+  }
+
+
+
   calculate() {
     this.result = this.firstNumber + this.secondNumber;
     if(this.result % 2 === 0){

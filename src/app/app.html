@@ -5,7 +5,10 @@
 <input type="number" [(ngModel)]="result">
 </div>
 
-<button class="btn-color medium-font blue-font large-padding">non servo a niente</button>
-
+<button [ngClass]="classes">non servo a niente</button>
+<button>attiva colore di background</button>
+<button>metti il font medium</button>
+<button>metti il font blu</button>
+<button>aumenta padding</button>
 
 <router-outlet />
