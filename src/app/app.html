@@ -1,14 +1,19 @@
 <input type="number" [(ngModel)]="firstNumber" (change)="calculate()">
 <input type="number" [(ngModel)]="secondNumber" (change)="calculate()">
 <button [ngClass]="isResultEven ? 'crimson-btn' : ''" (click)="calculate()">Calculate</button>
-<div>
+<div appNotificationNumber="2">
 <input type="number" [(ngModel)]="result">
 </div>
 
 <button [ngClass]="classes">non servo a niente</button>
-<button>attiva colore di background</button>
-<button>metti il font medium</button>
-<button>metti il font blu</button>
-<button>aumenta padding</button>
+<button (click)="activateColor()">attiva colore di background</button>
+<button (click)="classes['medium-font'] = !classes['medium-font']">metti il font medium</button>
+<button (click)="classes['blue-font'] = !classes['blue-font']">metti il font blu</button>
+<button (click)="classes['large-padding'] = !classes['large-padding']">aumenta padding</button>
+
+<p appSuperButton [ngStyle]="pStyle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus soluta suscipit veniam? Consectetur eius corrupti sunt. Culpa omnis quibusdam quis provident quaerat, officiis placeat aliquid assumenda deleniti libero harum consequuntur.</p>
+<button appSuperButton (click)="decreaseFont()">-</button>
+<button appNotificationNumber (click)="increaseFont()">+</button>
+<button (click)="toggleBold()">bold</button>
 
 <router-outlet />
